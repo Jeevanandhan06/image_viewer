@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(  MyApp());
 }
@@ -13,10 +13,20 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Image viewer'),
         ),
-        body: Center(
-          child: Image(
-            image: AssetImage('images/shirt.jpg'),
-          ),
+        body: Column(
+          children: [
+            Text('OTTO Branded Shirts',
+              style:GoogleFonts.aleo(
+                fontSize: 30,
+              )
+              ),
+
+            Image(
+              alignment: Alignment.bottomRight,
+              width: 500,
+              image: AssetImage('images/shirt.jpg'),
+            ),
+          ]
         ),
       ),
     );
